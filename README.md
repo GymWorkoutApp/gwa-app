@@ -1,2 +1,0 @@
-# gwa-app
-Application mobile.
