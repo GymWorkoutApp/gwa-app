@@ -1,8 +1,8 @@
 import {createBottomTabNavigator, createStackNavigator} from "react-navigation";
 import RepositoryList from "../components/RepositoryList";
 import "../config/reactotron";
-import SignInScreen from "../screen/signin";
-import HomeScreen from '../screen/home';
+import SignInScreen from "../screens/signin";
+import HomeScreen from '../screens/home';
 
 const AuthenticationNavigator = createStackNavigator(
     {
@@ -12,8 +12,14 @@ const AuthenticationNavigator = createStackNavigator(
                 header: null,
             }
         },
-        signIn: SignInScreen,
-        // ForgotPassword: ForgotPasswordScreen,
+        signIn: {
+            screen: SignInScreen,
+            navigationOptions: {
+                header: null,
+            }
+        },
+        // forgotPassword: ForgotPasswordScreen,
+        // register: RegisterScreen,
     },
     {
         initialRouteName: "home"

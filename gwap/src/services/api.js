@@ -19,6 +19,9 @@ const api = {
   teacher: create({
     baseURL: Config.API_TEACHER_URL,
   }),
+  gym: create({
+    baseURL: Config.API_GYM_URL,
+  }),
   muscle_group: create({
     baseURL: Config.API_MUSCLE_GROUP_URL,
   }),
@@ -71,6 +74,17 @@ api.student.addAsyncRequestTransform(request => async () => {
 });
 
 api.student.addResponseTransform(response => {
+  if (!response.ok) throw response;
+});
+
+api.gym.addAsyncRequestTransform(request => async () => {
+  const token = await AsyncStorage.getItem('@CodeApi:token');
+
+  if (token)
+    request.headers['Authorization'] = `Bearer ${token}`;
+});
+
+api.gym.addResponseTransform(response => {
   if (!response.ok) throw response;
 });
 

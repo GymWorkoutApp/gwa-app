@@ -4,7 +4,9 @@ import SignInActions from "../ducks/signin";
 import {signIn} from "../../services";
 
 export function* signInUser( user ) {
-  const response = yield call(signIn(user));
+  const response = yield signIn(user);
 
-  yield put(SignInActions.signInSuccess(response.data));
+  console.log(response);
+
+  yield put(SignInActions.signInSuccess(response));
 }
