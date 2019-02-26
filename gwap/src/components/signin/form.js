@@ -9,9 +9,6 @@ import Input from "../input";
 import {EMAIL_VALID_REGEX, PASSWORD_VALID_REGEX} from "../../utils/constants";
 import PropTypes from 'prop-types';
 
-// import ButtonSubmit from './ButtonSubmit';
-// import SignupSection from './SignupSection';
-
 
 export default class Form extends Component {
     constructor(props) {
@@ -98,8 +95,9 @@ Form.propTypes = {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        height: 100,
         alignItems: 'center',
+        justifyContent: 'center'
     },
     btnEye: {
         position: 'absolute',

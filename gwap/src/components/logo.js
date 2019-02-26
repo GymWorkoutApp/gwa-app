@@ -1,24 +1,29 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
+import PropTypes from "prop-types";
+import Form from "./signup/form";
 
 export default class Logo extends Component {
     render() {
         return (
-            <View style={styles.logoContainer}>
+            <View style={[styles.logoContainer, this.props.style]}>
                 <Image
                     style={styles.logo}
-                    source={require('../../assets/images/gwap-logo.png')}
+                    source={require('../assets/images/gwap-logo.png')}
                 />
             </View>
         );
     }
 }
 
+Logo.propTypes = {
+    style: PropTypes.object,
+};
+
+
 const styles = StyleSheet.create({
     logoContainer: {
         alignItems: 'center',
-        flexGrow: 1,
-        flex: 1,
         justifyContent: 'center',
     },
     logo: {

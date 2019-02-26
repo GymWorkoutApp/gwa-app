@@ -2,6 +2,7 @@ import {createBottomTabNavigator, createStackNavigator} from "react-navigation";
 import RepositoryList from "../components/RepositoryList";
 import "../config/reactotron";
 import SignInScreen from "../screens/signin";
+import SignUpScreen from "../screens/signup";
 import HomeScreen from '../screens/home';
 
 const AuthenticationNavigator = createStackNavigator(
@@ -14,6 +15,12 @@ const AuthenticationNavigator = createStackNavigator(
         },
         signIn: {
             screen: SignInScreen,
+            navigationOptions: {
+                header: null,
+            }
+        },
+        signUp: {
+            screen: SignUpScreen,
             navigationOptions: {
                 header: null,
             }

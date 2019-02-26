@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "70401825473",
+    "firebase_url": "https://gym-app-gd.firebaseio.com",
+    "project_id": "gym-app-gd",
+    "storage_bucket": "gym-app-gd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70401825473:android:97cc0ce009627213",
+        "android_client_info": {
+          "package_name": "com.gwap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70401825473-mq1j6fcuq192sp9fnt3m9qsb2mpq4tud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gwap",
+            "certificate_hash": "226d4de97fbea6940f0f7f02a70d4addc9e6cdd3"
+          }
+        },
+        {
+          "client_id": "70401825473-4etof8991tjjiibelgl03savtshs3vmt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4NkjBCmL8xXmEcIvMx9tho34NkJuEKSw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70401825473-4etof8991tjjiibelgl03savtshs3vmt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "70401825473-t6ebqol6osl01nbrnp51n280s4trrmbq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gwap"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

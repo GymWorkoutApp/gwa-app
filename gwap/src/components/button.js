@@ -12,7 +12,7 @@ import {
     View,
 } from 'react-native';
 
-import spinner from '../../assets/images/loading.gif';
+import spinner from '../assets/images/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
@@ -77,7 +77,9 @@ export default class ButtonSubmit extends Component {
                     <TouchableOpacity
                         style={styles.button}
                         onPress={this._onPress}
-                        activeOpacity={1}>
+                        activeOpacity={1}
+                        disabled={this.props.disabled}
+                        >
                         {this.state.isLoading ? (
                             <Image source={spinner} style={styles.image} />
                         ) : (
@@ -95,12 +97,11 @@ export default class ButtonSubmit extends Component {
 
 ButtonSubmit.propTypes = {
     onClick: PropTypes.func.isRequired,
+    disabled: PropTypes.bool
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        top: -164,
         alignItems: 'center',
         justifyContent: 'flex-start',
     },

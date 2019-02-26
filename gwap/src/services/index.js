@@ -2,12 +2,18 @@ import api from "./api";
 
 export const signIn = async (user) => {
     try {
-        console.log(`url: ${api.oauth2.baseURL}`)
-        const response = await api.oauth2.post(`/token?grant_type=password&scope=read,write&username=${user.email}&password=${user.password}`);
-        console.log(response);
-        const data = await response.toJSON();
-        return data;
+        const response = await api.oauth.post(`/token?grant_type=password&client_id=6d3ea1a2-75df-44aa-ad81-66f363db21b2&client_secret=NmQzZWExYTItNzVkZi00NGFhLWFkODEtNjZmMzYzZGIyMWIy&scope=read,write&username=${user.email}&password=${user.password}`);
+        return response
     } catch (e) {
-        console.log(e);
+        console.error(e);
+    }
+}
+
+export const signUp = async (user) => {
+    try {
+        const response = await api.oauth.post(`/token?grant_type=password&client_id=6d3ea1a2-75df-44aa-ad81-66f363db21b2&client_secret=NmQzZWExYTItNzVkZi00NGFhLWFkODEtNjZmMzYzZGIyMWIy&scope=read,write&username=${user.email}&password=${user.password}`);
+        return response
+    } catch (e) {
+        console.error(e);
     }
 }

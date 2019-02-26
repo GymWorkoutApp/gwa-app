@@ -16,12 +16,16 @@ class HomeScreen extends React.Component {
             <View style={styles.loginContainer}>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() =>
-                        console.log(this.props.navigation.navigate('signIn'))
-
-                    }
+                    onPress={() => this.props.navigation.navigate('signIn')}
                     activeOpacity={1}>
                     <Text >Go to signin</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => this.props.navigation.navigate('signUp')}
+                    activeOpacity={1}>
+                    <Text >Go to signup</Text>
                 </TouchableOpacity>
             </View>
         );
